@@ -8,7 +8,7 @@
 </p>
 
 ## To Run
-- Copy desired .txt file from [src](/src) folder
+- Copy desired .txt file from [src](src) folder
 - Go to [Falstad Simulator](https://www.falstad.com/circuit/circuitjs.html)
 - Press on `File` on top left side of the dashboard
 - Select import from text
