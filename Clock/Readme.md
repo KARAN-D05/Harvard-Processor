@@ -4,7 +4,7 @@
 <p align="center">
   <img src="images/astable_clk.png" width="800"/>
   <br>
-  <sub><b> Astable Clock - Oscillates between 0 & 1 </sub>
+  <sub>Astable Clock - Oscillates between 0 & 1 </sub>
 </p>
 
 ## To Run
