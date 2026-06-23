@@ -23,5 +23,5 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 <p align="center">
   <img src="ALU/images/alu_synthesis.png" width="500"/>
   <br>
-  <sub>ALU performing arithmetic and logical operations</sub>
+  <sub>ALU Synthesized netlist</sub>
 </p>
