@@ -1,3 +1,6 @@
+// Supports 8 Operations: ADD, SUB, AND, OR, NOT A, XOR, PASS A, PASS B
+// 5 Flags: neg(negative result), zero(zero result), agtb(a>b), aeqb(a=b), carry(out[WIDTH])
+
 module ALU #(
     parameter WIDTH = 8,
     parameter NUM_OPS = 8
