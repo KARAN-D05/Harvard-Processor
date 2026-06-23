@@ -13,6 +13,6 @@
 The following table summarizes post-synthesis implementation results obtained using the Sky130 HD standard-cell library.
 Timing results correspond to constrained static timing analysis using a 10 ns clock period, 1 ns input delay, and 1 ns output delay.
 
-| Module | Area (µm²) | Worst Slack (ns) | Estimated Fmax | Total Power @ 100 MHz |
+| Module | Area | Worst Slack | Estimated Fmax | Total Power @ 100 MHz |
 |----------|----------:|----------:|----------:|----------:|
-| A Register (8-bit) | 370.3552 | 8.59 | ~709 MHz | 41.3 |
+| A Register (8-bit) | 370.3552 µm² | 8.59 ns | ~709 MHz | 41.3 µW |
