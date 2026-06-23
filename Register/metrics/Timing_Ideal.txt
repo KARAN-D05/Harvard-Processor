@@ -1,3 +1,5 @@
+0 Input & Output delay
+
 Startpoint: _83_ (rising edge-triggered flip-flop clocked by clk)
 Endpoint: _83_ (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
@@ -24,5 +26,3 @@ Path Type: max
           -0.61   data arrival time
 ---------------------------------------------------------
            9.27   slack (MET)
-
-
