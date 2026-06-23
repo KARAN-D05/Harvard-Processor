@@ -1,0 +1,20 @@
+
+15. Printing statistics.
+
+=== A_Register ===
+
+   Number of wires:                 66
+   Number of wire bits:             87
+   Number of public wires:           7
+   Number of public wire bits:      28
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 32
+     sky130_fd_sc_hd__and2_0         8
+     sky130_fd_sc_hd__clkinv_1       8
+     sky130_fd_sc_hd__dfrtp_1        8
+     sky130_fd_sc_hd__mux2_1         8
+
+   Chip area for module '\A_Register': 370.355200
+
