@@ -8,18 +8,6 @@
 ![Yosys](https://img.shields.io/badge/Yosys-Synthesis-43A047?style=flat-square)
 ![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_Analysis-8E24AA?style=flat-square)
 
-## ⚙️ Implemented Modules
-
-| Module               | Description                                         | Status |
-| -------------------- | --------------------------------------------------- | ------ |
-| ALU                  | Arithmetic and logical operations with status flags | ✅     |
-| A Register           | Loadable general-purpose register                   | ✅     |
-| B Register           | Loadable general-purpose register                   | ✅     |
-| Program Counter      | Instruction address generation                      | ⏳     |
-| RAM                  | Data storage subsystem                              | ⏳     |
-| Instruction Register | Stores current instruction                          | ⏳     |
-| Control Unit         | Generates control signals                           | ⏳     |
-
 ## 🔬 Physical Characterization
 
 The following table summarizes post-synthesis implementation results obtained using the Sky130 HD standard-cell library.
@@ -37,3 +25,15 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
   <br>
   <sub>ALU performing arithmetic & logical operations</sub>
 </p>
+
+## ⚙️ Implemented Modules
+
+| Module               | Description                                         | Status |
+| -------------------- | --------------------------------------------------- | ------ |
+| ALU                  | Arithmetic and logical operations with status flags | ✅     |
+| A Register           | Loadable general-purpose register                   | ✅     |
+| B Register           | Loadable general-purpose register                   | ✅     |
+| Program Counter      | Instruction address generation                      | ⏳     |
+| RAM                  | Data storage subsystem                              | ⏳     |
+| Instruction Register | Stores current instruction                          | ⏳     |
+| Control Unit         | Generates control signals                           | ⏳     |
