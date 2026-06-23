@@ -2,21 +2,33 @@
 An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arithmetic, logical, and data transfer operations.
 
 <p align="center">
-  <img src="images/alu_diagram.png" width="1000"/>
+  <img src="images/alu_diagram.png" width="500"/>
   <br>
   <sub>ALU Block-Diagram</sub>
 </p>
 
 ### Supported Operations
-* Addition (ADD)
-* Subtraction (SUB)
-* Bitwise AND
-* Bitwise OR
-* Bitwise XOR
-* Bitwise NOT
-* Pass A
-* Pass B
-* 
+| Opcode | Operation | Description                  |
+| ------ | --------- | ---------------------------- |
+| `000`  | ADD       | Addition (`A + B`)           |
+| `001`  | SUB       | Subtraction (`A - B`)        |
+| `010`  | AND       | Bitwise AND (`A & B`)        |
+| `011`  | OR        | Bitwise OR (`A \| B`)        |
+| `100`  | XOR       | Bitwise XOR (`A ^ B`)        |
+| `101`  | NOT       | Bitwise NOT (`~A`)           |
+| `110`  | PASS A    | Transfer operand A to output |
+| `111`  | PASS B    | Transfer operand B to output |
+
+### Status Flags
+
+| Flag    | Description                                                        |
+| ------- | ------------------------------------------------------------------ |
+| `NEG`   | Asserted when the most significant bit (MSB) of the result is high |
+| `ZERO`  | Asserted when the result equals zero                               |
+| `AGTB`  | Asserted when operand A is greater than operand B                  |
+| `AEQB`  | Asserted when operand A equals operand B                           |
+| `CARRY` | Carry-out generated during arithmetic operations                   |
+
 <p align="center">
   <img src="images/alu_synthesis.png" width="600"/>
   <br>
