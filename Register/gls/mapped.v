@@ -2,8 +2,8 @@
 
 (* dynports =  1  *)
 (* top =  1  *)
-(* src = "A_Register.v:1.1-26.10" *)
-module A_Register(in, enableA, loadA, rst, clk, out);
+(* src = "A_Register.v:1.1-21.10" *)
+module A_Register(in, loadA, rst, clk, out);
   wire _00_;
   wire _01_;
   wire _02_;
@@ -20,7 +20,7 @@ module A_Register(in, enableA, loadA, rst, clk, out);
   wire _13_;
   wire _14_;
   wire _15_;
-  (* src = "A_Register.v:5.11-5.18" *)
+  (* src = "A_Register.v:4.23-4.25" *)
   wire _16_;
   (* src = "A_Register.v:4.23-4.25" *)
   wire _17_;
@@ -36,43 +36,34 @@ module A_Register(in, enableA, loadA, rst, clk, out);
   wire _22_;
   (* src = "A_Register.v:4.23-4.25" *)
   wire _23_;
-  (* src = "A_Register.v:4.23-4.25" *)
+  (* src = "A_Register.v:5.11-5.16" *)
   wire _24_;
-  (* src = "A_Register.v:6.11-6.16" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _25_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _26_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _27_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _28_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _29_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _30_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _31_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   wire _32_;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:6.11-6.14" *)
   wire _33_;
-  (* src = "A_Register.v:7.11-7.14" *)
   wire _34_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _35_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _36_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _37_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _38_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _39_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _40_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _41_;
-  (* src = "A_Register.v:12.20-12.23" *)
   wire _42_;
   wire _43_;
   wire _44_;
@@ -81,252 +72,189 @@ module A_Register(in, enableA, loadA, rst, clk, out);
   wire _47_;
   wire _48_;
   wire _49_;
-  wire _50_;
-  wire _51_;
-  wire _52_;
-  wire _53_;
-  wire _54_;
-  wire _55_;
-  wire _56_;
-  wire _57_;
-  wire _58_;
-  (* src = "A_Register.v:8.11-8.14" *)
+  (* src = "A_Register.v:7.11-7.14" *)
   input clk;
   wire clk;
-  (* src = "A_Register.v:5.11-5.18" *)
-  input enableA;
-  wire enableA;
   (* src = "A_Register.v:4.23-4.25" *)
   input [7:0] in;
   wire [7:0] in;
-  (* src = "A_Register.v:6.11-6.16" *)
+  (* src = "A_Register.v:5.11-5.16" *)
   input loadA;
   wire loadA;
-  (* src = "A_Register.v:9.24-9.27" *)
+  (* src = "A_Register.v:8.28-8.31" *)
   output [7:0] out;
   wire [7:0] out;
-  (* src = "A_Register.v:7.11-7.14" *)
+  (* src = "A_Register.v:6.11-6.14" *)
   input rst;
   wire rst;
-  (* src = "A_Register.v:12.20-12.23" *)
-  wire [7:0] val;
-  sky130_fd_sc_hd__clkinv_1 _59_ (
-    .A(_34_),
-    .Y(_00_)
-  );
-  sky130_fd_sc_hd__mux2_1 _60_ (
-    .A0(_42_),
-    .A1(_24_),
-    .S(_25_),
-    .X(_15_)
-  );
-  sky130_fd_sc_hd__mux2_1 _61_ (
-    .A0(_41_),
-    .A1(_23_),
-    .S(_25_),
-    .X(_14_)
-  );
-  sky130_fd_sc_hd__mux2_1 _62_ (
-    .A0(_40_),
-    .A1(_22_),
-    .S(_25_),
-    .X(_13_)
-  );
-  sky130_fd_sc_hd__mux2_1 _63_ (
-    .A0(_39_),
-    .A1(_21_),
-    .S(_25_),
-    .X(_12_)
-  );
-  sky130_fd_sc_hd__mux2_1 _64_ (
-    .A0(_38_),
-    .A1(_20_),
-    .S(_25_),
-    .X(_11_)
-  );
-  sky130_fd_sc_hd__mux2_1 _65_ (
-    .A0(_37_),
-    .A1(_19_),
-    .S(_25_),
-    .X(_10_)
-  );
-  sky130_fd_sc_hd__mux2_1 _66_ (
-    .A0(_36_),
-    .A1(_18_),
-    .S(_25_),
-    .X(_09_)
-  );
-  sky130_fd_sc_hd__mux2_1 _67_ (
-    .A0(_35_),
-    .A1(_17_),
-    .S(_25_),
-    .X(_08_)
-  );
-  sky130_fd_sc_hd__and2_0 _68_ (
-    .A(_35_),
-    .B(_16_),
-    .X(_26_)
-  );
-  sky130_fd_sc_hd__and2_0 _69_ (
-    .A(_36_),
-    .B(_16_),
-    .X(_27_)
-  );
-  sky130_fd_sc_hd__and2_0 _70_ (
-    .A(_37_),
-    .B(_16_),
-    .X(_28_)
-  );
-  sky130_fd_sc_hd__and2_0 _71_ (
-    .A(_38_),
-    .B(_16_),
-    .X(_29_)
-  );
-  sky130_fd_sc_hd__and2_0 _72_ (
-    .A(_39_),
-    .B(_16_),
-    .X(_30_)
-  );
-  sky130_fd_sc_hd__and2_0 _73_ (
-    .A(_40_),
-    .B(_16_),
-    .X(_31_)
-  );
-  sky130_fd_sc_hd__and2_0 _74_ (
-    .A(_41_),
-    .B(_16_),
-    .X(_32_)
-  );
-  sky130_fd_sc_hd__and2_0 _75_ (
-    .A(_42_),
-    .B(_16_),
-    .X(_33_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _76_ (
-    .A(_34_),
-    .Y(_01_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _77_ (
-    .A(_34_),
-    .Y(_02_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _78_ (
-    .A(_34_),
-    .Y(_03_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _79_ (
-    .A(_34_),
-    .Y(_04_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _80_ (
-    .A(_34_),
-    .Y(_05_)
-  );
-  sky130_fd_sc_hd__clkinv_1 _81_ (
-    .A(_34_),
+  sky130_fd_sc_hd__clkinv_1 _50_ (
+    .A(_33_),
     .Y(_06_)
   );
-  sky130_fd_sc_hd__clkinv_1 _82_ (
-    .A(_34_),
+  sky130_fd_sc_hd__mux2_1 _51_ (
+    .A0(_32_),
+    .A1(_23_),
+    .S(_24_),
+    .X(_13_)
+  );
+  sky130_fd_sc_hd__mux2_1 _52_ (
+    .A0(_25_),
+    .A1(_16_),
+    .S(_24_),
+    .X(_12_)
+  );
+  sky130_fd_sc_hd__mux2_1 _53_ (
+    .A0(_26_),
+    .A1(_17_),
+    .S(_24_),
+    .X(_11_)
+  );
+  sky130_fd_sc_hd__mux2_1 _54_ (
+    .A0(_27_),
+    .A1(_18_),
+    .S(_24_),
+    .X(_10_)
+  );
+  sky130_fd_sc_hd__mux2_1 _55_ (
+    .A0(_28_),
+    .A1(_19_),
+    .S(_24_),
+    .X(_09_)
+  );
+  sky130_fd_sc_hd__mux2_1 _56_ (
+    .A0(_29_),
+    .A1(_20_),
+    .S(_24_),
+    .X(_08_)
+  );
+  sky130_fd_sc_hd__mux2_1 _57_ (
+    .A0(_30_),
+    .A1(_21_),
+    .S(_24_),
+    .X(_15_)
+  );
+  sky130_fd_sc_hd__mux2_1 _58_ (
+    .A0(_31_),
+    .A1(_22_),
+    .S(_24_),
+    .X(_14_)
+  );
+  sky130_fd_sc_hd__clkinv_1 _59_ (
+    .A(_33_),
     .Y(_07_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _83_ (
-    .CLK(clk),
-    .D(_51_),
-    .Q(val[0]),
-    .RESET_B(_43_)
+  sky130_fd_sc_hd__clkinv_1 _60_ (
+    .A(_33_),
+    .Y(_00_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _84_ (
-    .CLK(clk),
-    .D(_52_),
-    .Q(val[1]),
-    .RESET_B(_44_)
+  sky130_fd_sc_hd__clkinv_1 _61_ (
+    .A(_33_),
+    .Y(_01_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _85_ (
-    .CLK(clk),
-    .D(_53_),
-    .Q(val[2]),
-    .RESET_B(_45_)
+  sky130_fd_sc_hd__clkinv_1 _62_ (
+    .A(_33_),
+    .Y(_02_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _86_ (
-    .CLK(clk),
-    .D(_54_),
-    .Q(val[3]),
-    .RESET_B(_46_)
+  sky130_fd_sc_hd__clkinv_1 _63_ (
+    .A(_33_),
+    .Y(_03_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _87_ (
-    .CLK(clk),
-    .D(_55_),
-    .Q(val[4]),
-    .RESET_B(_47_)
+  sky130_fd_sc_hd__clkinv_1 _64_ (
+    .A(_33_),
+    .Y(_04_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _88_ (
-    .CLK(clk),
-    .D(_56_),
-    .Q(val[5]),
-    .RESET_B(_48_)
+  sky130_fd_sc_hd__clkinv_1 _65_ (
+    .A(_33_),
+    .Y(_05_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _89_ (
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _66_ (
     .CLK(clk),
-    .D(_57_),
-    .Q(val[6]),
-    .RESET_B(_49_)
+    .D(_46_),
+    .Q(out[0]),
+    .RESET_B(_38_)
   );
-  (* src = "A_Register.v:14.3-22.6" *)
-  sky130_fd_sc_hd__dfrtp_1 _90_ (
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _67_ (
     .CLK(clk),
-    .D(_58_),
-    .Q(val[7]),
-    .RESET_B(_50_)
+    .D(_45_),
+    .Q(out[1]),
+    .RESET_B(_37_)
   );
-  assign _42_ = val[7];
-  assign _24_ = in[7];
-  assign _25_ = loadA;
-  assign _58_ = _15_;
-  assign _41_ = val[6];
-  assign _23_ = in[6];
-  assign _57_ = _14_;
-  assign _40_ = val[5];
-  assign _22_ = in[5];
-  assign _56_ = _13_;
-  assign _39_ = val[4];
-  assign _21_ = in[4];
-  assign _55_ = _12_;
-  assign _38_ = val[3];
-  assign _20_ = in[3];
-  assign _54_ = _11_;
-  assign _37_ = val[2];
-  assign _19_ = in[2];
-  assign _53_ = _10_;
-  assign _36_ = val[1];
-  assign _18_ = in[1];
-  assign _52_ = _09_;
-  assign _35_ = val[0];
-  assign _17_ = in[0];
-  assign _51_ = _08_;
-  assign _34_ = rst;
-  assign _43_ = _00_;
-  assign _44_ = _01_;
-  assign _45_ = _02_;
-  assign _46_ = _03_;
-  assign _47_ = _04_;
-  assign _48_ = _05_;
-  assign _49_ = _06_;
-  assign _50_ = _07_;
-  assign _16_ = enableA;
-  assign out[0] = _26_;
-  assign out[1] = _27_;
-  assign out[2] = _28_;
-  assign out[3] = _29_;
-  assign out[4] = _30_;
-  assign out[5] = _31_;
-  assign out[6] = _32_;
-  assign out[7] = _33_;
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _68_ (
+    .CLK(clk),
+    .D(_44_),
+    .Q(out[2]),
+    .RESET_B(_36_)
+  );
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _69_ (
+    .CLK(clk),
+    .D(_43_),
+    .Q(out[3]),
+    .RESET_B(_35_)
+  );
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _70_ (
+    .CLK(clk),
+    .D(_42_),
+    .Q(out[4]),
+    .RESET_B(_34_)
+  );
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _71_ (
+    .CLK(clk),
+    .D(_49_),
+    .Q(out[5]),
+    .RESET_B(_41_)
+  );
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _72_ (
+    .CLK(clk),
+    .D(_48_),
+    .Q(out[6]),
+    .RESET_B(_40_)
+  );
+  (* src = "A_Register.v:11.3-19.6" *)
+  sky130_fd_sc_hd__dfrtp_1 _73_ (
+    .CLK(clk),
+    .D(_47_),
+    .Q(out[7]),
+    .RESET_B(_39_)
+  );
+  assign _32_ = out[7];
+  assign _23_ = in[7];
+  assign _24_ = loadA;
+  assign _47_ = _13_;
+  assign _25_ = out[0];
+  assign _16_ = in[0];
+  assign _46_ = _12_;
+  assign _26_ = out[1];
+  assign _17_ = in[1];
+  assign _45_ = _11_;
+  assign _27_ = out[2];
+  assign _18_ = in[2];
+  assign _44_ = _10_;
+  assign _28_ = out[3];
+  assign _19_ = in[3];
+  assign _43_ = _09_;
+  assign _29_ = out[4];
+  assign _20_ = in[4];
+  assign _42_ = _08_;
+  assign _30_ = out[5];
+  assign _21_ = in[5];
+  assign _49_ = _15_;
+  assign _31_ = out[6];
+  assign _22_ = in[6];
+  assign _48_ = _14_;
+  assign _33_ = rst;
+  assign _40_ = _06_;
+  assign _41_ = _07_;
+  assign _34_ = _00_;
+  assign _35_ = _01_;
+  assign _36_ = _02_;
+  assign _37_ = _03_;
+  assign _38_ = _04_;
+  assign _39_ = _05_;
 endmodule
