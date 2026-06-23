@@ -1,3 +1,5 @@
+Power @ 100MHz
+
 Group                  Internal  Switching    Leakage      Total
                           Power      Power      Power      Power (Watts)
 ----------------------------------------------------------------
