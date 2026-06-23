@@ -8,7 +8,7 @@
 ![Yosys](https://img.shields.io/badge/Yosys-Synthesis-43A047?style=flat-square)
 ![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_Analysis-8E24AA?style=flat-square)
 
-## Implemented Modules
+## ⚙️ Implemented Modules
 
 | Module               | Description                                         | Status |
 | -------------------- | --------------------------------------------------- | ------ |
@@ -19,20 +19,6 @@
 | RAM                  | Data storage subsystem                              | ⏳     |
 | Instruction Register | Stores current instruction                          | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
-
-## Technology Stack
-
-| Category               | Tools          |
-| ---------------------- | -------------- |
-| RTL Design             | Verilog        |
-| Simulation             | Icarus Verilog |
-| Waveform Analysis      | GTKWave        |
-| Linting                | Verilator      |
-| Synthesis              | Yosys          |
-| Static Timing Analysis | OpenSTA        |
-| Physical Design        | OpenROAD       |
-| Standard Cell Library  | Sky130 HD      |
-
 
 ## 🔬 Physical Characterization
 
