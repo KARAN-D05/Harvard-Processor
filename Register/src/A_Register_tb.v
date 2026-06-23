@@ -1,4 +1,4 @@
-`include timescale 1ns/1ns
+`timescale 1ns/1ns
 
 module testbench;
 
@@ -12,7 +12,7 @@ module testbench;
 
   A_Register #(
     .WIDTH(WIDTH)
-    dut(
+  ) dut (
     .in(in),
     .loadA(load),
     .rst(rst),
