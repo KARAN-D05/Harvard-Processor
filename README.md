@@ -15,8 +15,6 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 
 > Technology: Sky130HD
 
-### 📊 Implementation Metrics Comparison
-
 | Module | Area | Worst Slack | Estimated Fmax | Total Power @ 100 MHz |
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | A Register (8-bit) | 370.3552 µm² | 8.59 ns | ~709 MHz | 41.3 µW |
