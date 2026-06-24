@@ -10,7 +10,7 @@ An 8-bit parameterized loadable counter with asynchronous reset used to track in
 * Parameterized width for scalability
 
 <p align="center">
-  <img src="images/pc_waveform.png" width="800"/>
+  <img src="images/pc_waveform.png" width="1000"/>
   <br>
   <sub>Program Counter incrementing and loading new values on load</sub>
 </p>
