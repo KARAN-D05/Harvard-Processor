@@ -1,27 +1,29 @@
-Startpoint: load (input port clocked by clk)
-Endpoint: _249_ (rising edge-triggered flip-flop clocked by clk)
+Startpoint: en (input port clocked by clk)
+Endpoint: _142_ (rising edge-triggered flip-flop clocked by clk)
 Path Group: clk
 Path Type: max
 
   Delay    Time   Description
-----------------------------------------------------------
+---------------------------------------------------------
    0.00    0.00   clock clk (rise edge)
    0.00    0.00   clock network delay (ideal)
-   1.00    1.00 v input external delay
-   0.00    1.00 v load (in)
-   0.16    1.16 v _225_/X (sky130_fd_sc_hd__a31o_1)
-   0.12    1.27 ^ _227_/Y (sky130_fd_sc_hd__o21ai_0)
-   0.00    1.27 ^ _249_/D (sky130_fd_sc_hd__dfrtp_1)
-           1.27   data arrival time
+   1.00    1.00 ^ input external delay
+   0.00    1.00 ^ en (in)
+   0.29    1.29 ^ _092_/X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+   0.13    1.42 v _093_/Y (sky130_fd_sc_hd__clkinv_1)
+   0.15    1.57 v _118_/Y (sky130_fd_sc_hd__a2bb2oi_1)
+   0.13    1.70 ^ _119_/Y (sky130_fd_sc_hd__o21ai_0)
+   0.00    1.70 ^ _142_/D (sky130_fd_sc_hd__dfrtp_1)
+           1.70   data arrival time
 
   10.00   10.00   clock clk (rise edge)
    0.00   10.00   clock network delay (ideal)
    0.00   10.00   clock reconvergence pessimism
-          10.00 ^ _249_/CLK (sky130_fd_sc_hd__dfrtp_1)
+          10.00 ^ _142_/CLK (sky130_fd_sc_hd__dfrtp_1)
   -0.08    9.92   library setup time
            9.92   data required time
-----------------------------------------------------------
+---------------------------------------------------------
            9.92   data required time
-          -1.27   data arrival time
-----------------------------------------------------------
-           8.64   slack (MET)
+          -1.70   data arrival time
+---------------------------------------------------------
+           8.22   slack (MET)
