@@ -1,3 +1,5 @@
+// Hardcoded ROM for Analysis
+
 module ROM #(parameter MSIZE=256, parameter IWIDTH=8)(
     input [$clog2(MSIZE)-1:0] addr,
     output reg [IWIDTH-1:0] out
