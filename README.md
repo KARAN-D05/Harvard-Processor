@@ -37,5 +37,6 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | Program Counter      | Instruction address generation                      | ✅     |
 | ROM                  | Program storage subsystem                           | ⏳     |
 | RAM                  | Data storage subsystem                              | ⏳     |
+| Memory Address Register | Program storage subsystem                        | ⏳     |
 | Instruction Register | Stores current instruction                          | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
