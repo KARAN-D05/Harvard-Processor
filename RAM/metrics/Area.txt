@@ -1,6 +1,3 @@
-
-13. Printing statistics.
-
 === RAM ===
 
    Number of wires:               9984
