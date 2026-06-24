@@ -21,6 +21,8 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | [Arithmetic and Logic Unit](ALU) | 877.0912 µm² |3.21 ns | ~311 MHz | 349 µW |
 | [Program Counter](PC) | 391.6256 µm² | 1.36 ns | ~735.29 MHz | 44.2 µW |
 | [ROM (256x8)](ROM) | 2277.184 µm² | 2.85 | ~351 MHz | 888 µW |
+| [RAM (256x8)](RAM) | 75862.7584 µm² | 5.18 ns | ~208 MHz | 9.88 mW |
+
 
 <p align="center">
   <img src="ALU/images/alu_waveform.png" width="800"/>
@@ -37,7 +39,7 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | B Register           | Loadable general-purpose register                   | ✅     |
 | Program Counter      | Instruction address generation                      | ✅     |
 | ROM                  | Program storage subsystem                           | ✅     |
-| RAM                  | Data storage subsystem                              | ⏳     |
+| RAM                  | Data storage subsystem                              | ✅     |
 | Memory Address Register | Program storage subsystem                        | ⏳     |
 | Instruction Register | Stores current instruction                          | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
