@@ -1,5 +1,3 @@
-// Parameterized 8-Bit Program Counter
-
 module PC #(
     parameter WIDTH = 8
 ) (
@@ -7,16 +5,17 @@ module PC #(
     input load,
     input clk,
     input rst,
+    input en,
     output reg [WIDTH-1:0] out
 );
 
  always@(posedge clk or posedge rst )begin
     
     if (rst) begin
-        out <= 8'b0;
+        out <= {WIDTH{1'b0}};
     end else if (load) begin 
         out <= in;
-    end else begin
+    end else if (en) begin
         out <= out + 1;
     end
 
