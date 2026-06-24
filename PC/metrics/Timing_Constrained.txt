@@ -4,7 +4,7 @@ Path Group: clk
 Path Type: max
 
   Delay    Time   Description
----------------------------------------------------------
+----------------------------------------------------------
    0.00    0.00   clock clk (rise edge)
    0.00    0.00   clock network delay (ideal)
    1.00    1.00 v input external delay
@@ -20,10 +20,8 @@ Path Type: max
           10.00 ^ _249_/CLK (sky130_fd_sc_hd__dfrtp_1)
   -0.08    9.92   library setup time
            9.92   data required time
----------------------------------------------------------
+----------------------------------------------------------
            9.92   data required time
           -1.27   data arrival time
----------------------------------------------------------
+----------------------------------------------------------
            8.64   slack (MET)
-
-
