@@ -1,0 +1,18 @@
+13. Printing statistics.
+
+=== IR ===
+
+   Number of wires:                103
+   Number of wire bits:            133
+   Number of public wires:           5
+   Number of public wire bits:      35
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 48
+     sky130_fd_sc_hd__clkinv_1      16
+     sky130_fd_sc_hd__dfrtp_1       16
+     sky130_fd_sc_hd__mux2_1        16
+
+   Chip area for module '\IR': 640.614400
+
