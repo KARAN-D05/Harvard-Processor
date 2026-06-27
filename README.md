@@ -23,8 +23,9 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | [ROM (256x8)](ROM) | 2277.184 µm² | 2.85 | ~351 MHz | 888 µW |
 | [RAM (256x8)](RAM) | 75862.7584 µm² | 5.18 ns | ~208 MHz | 9.88 mW |
 | [Memory Address Register](MAR) | 320.3072 µm² | 1.41 ns | ~709 MHz | 39.8 µW |
-| [Flags Register](FR) | 200.1920 µm² | 1.41 ns | ~709 MHz | 24.9 µW |
+| [Flags Register](FR) | 200.192 µm² | 1.41 ns | ~709 MHz | 24.9 µW |
 | [Instruction Register](IR) | 640.6144 µm² | 1.41 ns | ~709 MHz | 79.7 µW |
+| [T-State Counter](TC) | 125.12 µm² | 1.38 ns | ~725 MHz | 15.6 µW |
 
 <p align="center">
   <img src="ALU/images/alu_waveform.png" width="800"/>
@@ -45,5 +46,5 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | Memory Address Register | Stores RAM address that needs to be accessed     | ✅     |
 | Flags Register       | Stores status flags of computation                  | ✅     |
 | Instruction Register | Stores current instruction                          | ✅     |
-| T-State Counter      | Tracks the T-state of an instruction                | ⏳     |
+| T-State Counter      | Tracks the T-state of an instruction                | ✅     |
 | Control Unit         | Generates control signals                           | ⏳     |
