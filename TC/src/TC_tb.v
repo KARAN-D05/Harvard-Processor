@@ -106,7 +106,7 @@ module testbench;
       #1;
     end
 
-    $display("Simulation Complete!");
+    $display("Simulation Complete");
     $finish;
 
   end
