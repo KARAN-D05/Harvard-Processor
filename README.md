@@ -53,3 +53,26 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | Instruction Register | Stores current instruction                          | ✅     |
 | T-State Counter      | Tracks the T-state of an instruction                | ✅     |
 | Control Unit         | Generates control signals                           | ✅     |
+
+## ⬇️ Download This Repository
+
+### 🪟 Windows
+Download → [download_repos.bat](./download_repos.bat)
+``` 
+Double-click it and pick the repo(s) you want.
+```
+
+### 🐧 Linux / macOS
+Download → [download_repos.sh](./download_repos.sh)
+```
+bash
+
+chmod +x download_repos.sh
+./download_repos.sh
+```
+
+> Always downloads the latest version.
+
+## 📜License
+- Source code and HDL files are licensed under the MIT License.
+- Documentation, diagrams, images, and PDFs are licensed under Creative Commons Attribution 4.0 (CC BY 4.0).
