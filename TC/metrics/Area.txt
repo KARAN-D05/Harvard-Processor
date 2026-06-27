@@ -1,0 +1,23 @@
+
+15. Printing statistics.
+
+=== TC ===
+
+   Number of wires:                163
+   Number of wire bits:           1970
+   Number of public wires:           4
+   Number of public wire bits:       6
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 12
+     sky130_fd_sc_hd__a21bo_1        1
+     sky130_fd_sc_hd__a21oi_1        1
+     sky130_fd_sc_hd__clkinv_1       3
+     sky130_fd_sc_hd__dfrtp_1        3
+     sky130_fd_sc_hd__nand3b_1       1
+     sky130_fd_sc_hd__nor2_1         2
+     sky130_fd_sc_hd__xnor2_1        1
+
+   Chip area for module '\TC': 125.120000
+
