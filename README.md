@@ -45,4 +45,5 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | Memory Address Register | Stores RAM address that needs to be accessed     | ✅     |
 | Flags Register       | Stores status flags of computation                  | ✅     |
 | Instruction Register | Stores current instruction                          | ✅     |
+| T-State Counter      | Tracks the T-state of an instruction                | ⏳     |
 | Control Unit         | Generates control signals                           | ⏳     |
