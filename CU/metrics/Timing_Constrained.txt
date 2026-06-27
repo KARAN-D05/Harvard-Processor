@@ -1,0 +1,20 @@
+Startpoint: opcode[5] (input port)
+Endpoint: enable_PC (output port)
+Path Group: unconstrained
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   1.00    1.00 v input external delay
+   0.00    1.00 v opcode[5] (in)
+   0.67    1.67 ^ _442_/Y (sky130_fd_sc_hd__nor4b_1)
+   0.19    1.86 v _454_/Y (sky130_fd_sc_hd__nand4b_1)
+   0.09    1.95 ^ _464_/Y (sky130_fd_sc_hd__nand2_1)
+   0.07    2.02 v _465_/Y (sky130_fd_sc_hd__a2111oi_0)
+   0.27    2.29 ^ _469_/Y (sky130_fd_sc_hd__a2111oi_0)
+   0.00    2.29 ^ enable_PC (out)
+           2.29   data arrival time
+---------------------------------------------------------
+(Path is unconstrained)
+
+
