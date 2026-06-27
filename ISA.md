@@ -85,3 +85,29 @@ The processor uses a centralized multiplexer-based shared data bus.
 | STB `<addr>` | T0 | 0| 0|0 |1 |0 |0 |0 | 1| 0| 0|0 |0 | 0| 0|0 |
 | | T1 |0 |0 |0 |0 | 0| 1|0 |0 |0 |0 |0 |0 | 0| 1|0 |
 | | T2 |0 | 0| 0| 0|1 |0 | 0| 0|0 | 0| 0| 0| 0| 0|1 |
+
+## Instruction Encoding
+
+The processor uses an 8-bit opcode field. The current ISA occupies the first six opcodes, leaving the remaining opcode space reserved for future expansion.
+
+| Instruction | Addressing Mode | Opcode (Binary) | Opcode (Hex) | Opcode (Decimal) |
+|-------------|-----------------|:---------------:|:------------:|:----------------:|
+| LOADA `<imm>` | Immediate | `00000001` | `0x01` | 1 |
+| LOADB `<imm>` | Immediate | `00000010` | `0x02` | 2 |
+| LDA `<addr>` | Direct Memory | `00000011` | `0x03` | 3 |
+| LDB `<addr>` | Direct Memory | `00000100` | `0x04` | 4 |
+| STA `<addr>` | Direct Memory | `00000101` | `0x05` | 5 |
+| STB `<addr>` | Direct Memory | `00000110` | `0x06` | 6 |
+
+> **Instruction Format**
+>
+> ```
+> +----------+----------+
+> | Opcode   | Operand  |
+> +----------+----------+
+> | 8 bits   | 8 bits   |
+> +----------+----------+
+> ```
+>
+> - For **Immediate** instructions, the operand is interpreted as an 8-bit constant.
+> - For **Direct Memory** instructions, the operand is interpreted as an 8-bit RAM address.
