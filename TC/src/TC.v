@@ -1,3 +1,4 @@
+// T-State Counter
 module TC #(
     parameter STATES = 8
 ) (
