@@ -5,7 +5,7 @@ The processor follows a **Harvard architecture** with physically separate instru
 The architecture separates instruction flow from data flow, allowing a clean and modular organization that closely follows synchronous register-transfer principles.
 
 <p align="center">
-  <img src="../Computer/images/Computer.png" width="700"/>
+  <img src="Computer/images/Computer.png" width="700"/>
   <br>
   <sub>Computer Organization</sub>
 </p>
