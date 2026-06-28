@@ -1,3 +1,4 @@
+// Program Counter
 module PC #(
     parameter WIDTH = 8
 ) (
