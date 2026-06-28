@@ -27,15 +27,15 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | Module | Estimated Area | Critical Path | Estimated Fmax | Estimated Total Power|
 | ---------- | ---------- | ---------- | ---------- | ---------- |
 | [General Purpose Registers](Register) | 320.3072 µm² | 1.41 ns | ~709 MHz | 39.8 µW |
-| [Arithmetic and Logic Unit (ALU)](ALU) | 877.0912 µm² |3.21 ns | ~311 MHz | 349 µW |
-| [Program Counter (PC)](PC) | 444.176 µm² | 1.78 ns | ~561.79 MHz | 48.1 µW |
+| [Arithmetic and Logic Unit](ALU) | 877.0912 µm² |3.21 ns | ~311 MHz | 349 µW |
+| [Program Counter](PC) | 444.176 µm² | 1.78 ns | ~561.79 MHz | 48.1 µW |
 | [ROM (256x8)](ROM) | 2277.184 µm² | 2.85 ns | ~351 MHz | 888 µW |
 | [RAM (256x8)](RAM) | 75862.7584 µm² | 5.18 ns | ~208 MHz | 9.88 mW |
-| [Memory Address Register (MAR)](MAR) | 320.3072 µm² | 1.41 ns | ~709 MHz | 39.8 µW |
-| [Flags Register (FR)](FR) | 200.192 µm² | 1.41 ns | ~709 MHz | 24.9 µW |
-| [Instruction Register(IR)](IR) | 640.6144 µm² | 1.41 ns | ~709 MHz | 79.7 µW |
-| [T-State Counter (TC)](TC) | 125.12 µm² | 1.38 ns | ~725 MHz | 15.6 µW |
-| [Control Unit (CU)](CU) | 359.0944 µm² | 2.29 ns | ~437 MHz | 41.4 µW |
+| [Memory Address Register](MAR) | 320.3072 µm² | 1.41 ns | ~709 MHz | 39.8 µW |
+| [Flags Register](FR) | 200.192 µm² | 1.41 ns | ~709 MHz | 24.9 µW |
+| [Instruction Register](IR) | 640.6144 µm² | 1.41 ns | ~709 MHz | 79.7 µW |
+| [T-State Counter](TC) | 125.12 µm² | 1.38 ns | ~725 MHz | 15.6 µW |
+| [Control Unit](CU) | 359.0944 µm² | 2.29 ns | ~437 MHz | 41.4 µW |
 | [Computer](Computer) | 80347.06 µm² | 25.55 ns | ~39 MHz | 8.67 mW |
 
 > Note: The reported RAM area and timing correspond to a behavioral Verilog memory synthesized entirely using Sky130 HD standard cells. Since no dedicated SRAM macro was used, the memory is implemented using flip-flops and associated decode/multiplexing logic, making it the dominant contributor to overall chip area and critical path delay.
