@@ -46,8 +46,6 @@ Clock Constraint
 | Critical Path Delay  |  25.55 ns |
 | Worst Negative Slack | -16.04 ns |
 
----
-
 ## Timing Analysis
 
 The complete processor successfully synthesized to the Sky130 HD standard-cell library and underwent Static Timing Analysis (STA).
