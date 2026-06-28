@@ -8,15 +8,15 @@ A parameterized 8-bit stored-program computer designed from the RTL level in Ver
 ![Yosys](https://img.shields.io/badge/Yosys-Synthesis-43A047?style=flat-square)
 ![OpenSTA](https://img.shields.io/badge/OpenSTA-Static_Timing_Analysis_&_Power_Analysis-8E24AA?style=flat-square)
 
-## 📚 Documentation
-- [Instruction Set Architecture](ISA.md)
-- [Computer Organization](Organization.md)
-
 <p align="center">
   <img src="Computer/images/Computer.png" width="700"/>
   <br>
-  <sub>Computer Organization</sub>
+  <sub>Computer Block-Diagram</sub>
 </p>
+
+## 📚 Documentation
+- [Instruction Set Architecture](ISA.md)
+- [Computer Organization](Organization.md)
 
 ## 🔬 Physical Characterization
 
