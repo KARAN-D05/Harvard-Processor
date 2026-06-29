@@ -25,8 +25,8 @@ An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arit
 | ------- | ------------------------------------------------------------------ |
 | `NEG`   | Asserted when the most significant bit (MSB) of the result is high |
 | `ZERO`  | Asserted when the result equals zero                               |
-| `AGTB`  | Asserted when operand A is greater than operand B                  |
-| `AEQB`  | Asserted when operand A equals operand B                           |
+| `AGTB`  | Asserted when out is greater than operand B                        |
+| `AEQB`  | Asserted when out equals operand B                                 |
 | `CARRY` | Carry-out generated during arithmetic operations                   |
 
 <p align="center">
