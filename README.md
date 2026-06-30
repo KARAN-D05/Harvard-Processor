@@ -48,10 +48,11 @@ Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag
 
 > The waveform captures the branch-taken execution path, where the processor skips the alternate instruction sequence after evaluating the Negative flag, demonstrating conditional control flow.
 
+`[Max[0x17(23), 0x3A(58)] = 0x3A(58)]`
 <p align="center">
   <img src="Computer/images/max_waveform.png" width="1000"/>
   <br>
-  <sub>RTL simulation of the processor executing the Maximum of Two Numbers program, illustrating instruction fetch, ALU computation, memory operations, and control flow [Max[0x17(23), 0x3A(58)] = 0x3A(58)].</sub>
+  <sub>RTL simulation of the processor executing the Maximum of Two Numbers program, illustrating instruction fetch, ALU computation, memory operations, and control flow .</sub>
 </p>
 
 ## ✖️ Integer Multiplication
@@ -91,10 +92,11 @@ Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, 
 
 > The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch-decode-execute cycle, decrementing the multiplier while accumulating the multiplicand. The compressed timeline highlights multiple loop iterations, repeated memory accesses, arithmetic operations, conditional branching, and the final program termination (HLT).
 
+`[0x11(17) x 0x0D(13) = 0xDD(221)]`
 <p align="center">
   <img src="Computer/images/mult_waveform.png" width="1000"/>
   <br>
-  <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced[0x11(17) * 0x0D(13) = 0xDD(221)].</sub>
+  <sub>RTL simulation of the processor executing the Multiplication program, illustrating iterative execution until final product is produced.</sub>
 </p>
 
 ## 🔬 Physical Characterization
