@@ -64,27 +64,27 @@ This program implements unsigned integer multiplication using repeated addition.
 ; Unsigned Integer Multiplication (Repeated Addition)
 
 LOOP:
-    LDB ONE              ; Load constant 1
-    LDA MULTIPLIER       ; Load loop counter
+LDB ONE              ; Load constant 1
+LDA MULTIPLIER       ; Load loop counter
 
-    PASS A               ; Check if counter is zero
-    JZ  DONE             ; Finish if multiplication is complete
+PASS A               ; Check if counter is zero
+JZ  DONE             ; Finish if multiplication is complete
 
-    SUB                  ; counter = counter - 1
-    STA MULTIPLIER       ; Store updated counter
+SUB                  ; counter = counter - 1
+STA MULTIPLIER       ; Store updated counter
 
-    LDA RESULT           ; Load accumulated result
-    LDB MULTIPLICAND     ; Load multiplicand
-    ADD                  ; result += multiplicand
-    STA RESULT           ; Store updated result
+LDA RESULT           ; Load accumulated result
+LDB MULTIPLICAND     ; Load multiplicand
+ADD                  ; result += multiplicand
+STA RESULT           ; Store updated result
 
-    LDA MULTIPLIER       ; Reload counter
-    PASS A               ; Update flags
-    JNZ LOOP             ; Repeat until counter reaches zero
+LDA MULTIPLIER       ; Reload counter
+PASS A               ; Update flags
+JNZ LOOP             ; Repeat until counter reaches zero
 
 DONE:
-    LDA RESULT           ; Load final result
-    HLT                  ; End program
+LDA RESULT           ; Load final result
+HLT                  ; End program
 ```
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
