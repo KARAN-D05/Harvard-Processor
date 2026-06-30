@@ -89,7 +89,7 @@ DONE:
 
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
-> The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch–decode–execute cycle, decrementing the multiplier while accumulating the multiplicand. The compressed timeline highlights multiple loop iterations, repeated memory accesses, arithmetic operations, conditional branching, and the final program termination (HLT).
+> The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch-decode-execute cycle, decrementing the multiplier while accumulating the multiplicand. The compressed timeline highlights multiple loop iterations, repeated memory accesses, arithmetic operations, conditional branching, and the final program termination (HLT).
 
 <p align="center">
   <img src="Computer/images/mult_waveform.png" width="1000"/>
