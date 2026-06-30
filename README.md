@@ -87,6 +87,7 @@ DONE:
     LDA 0x09          ; Load final product
     HLT               ; End program
 ```
+> Replacing LDB 0x06 with LOAD B, 0x01 removes one memory access per loop iteration, saving one clock cycle per iteration. Consequently, the optimization scales linearly with the multiplier value, reducing execution time by up to 255 clock cycles (2550 ns at a 10 ns clock period) for an 8-bit multiplier.
 
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
