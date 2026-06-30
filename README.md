@@ -27,21 +27,21 @@ This program compares two unsigned 8-bit values stored in RAM address `0x08` and
 ```asm
 ; Program: Maximum of Two Numbers
 
-LDA 0x08        ; Load first number
-LDB 0x09        ; Load second number
+        LDA 0x08        ; Load first number
+        LDB 0x09        ; Load second number
 
-SUB             ; Compute A - B
-JN  STORE_B     ; If A < B, branch to store second number
+        SUB             ; Compute A - B
+        JN  STORE_B     ; If A < B, branch to store second number
 
-LDA 0x08        ; Restore first number
-STA 0x0A        ; Store first number as maximum
-JMP END         ; Skip alternate path
+        LDA 0x08        ; Restore first number
+        STA 0x0A        ; Store first number as maximum
+        JMP END         ; Skip alternate path
 
 STORE_B:
-STB 0x0A        ; Store second number as maximum
+        STB 0x0A        ; Store second number as maximum
 
 END:
-HLT             ; End program
+        HLT             ; End program
 ```
 
 Demonstrates data movement (`LDA, LDB, STA, STB`), ALU computation (`SUB`), flag-based control flow (`JN`), program control (`JMP`), and processor termination (`HLT`).
