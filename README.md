@@ -115,23 +115,6 @@ C10 = C×E + D×G
 C11 = C×F + D×H
 ```
 
-### Memory Layout
-
-| Address | Description |
-|---------:|-------------|
-| `0x00` | A |
-| `0x01` | B |
-| `0x02` | C |
-| `0x03` | D |
-| `0x04` | E |
-| `0x05` | F |
-| `0x06` | G |
-| `0x07` | H |
-| `0x10` | C00 |
-| `0x11` | C01 |
-| `0x12` | C10 |
-| `0x13` | C11 |
-
 ### Example
 
 Input Matrix A
@@ -160,18 +143,12 @@ Expected Output
 The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
 
 <p align="center">
-  <img src="images/matrix_multiplication_waveform.png" width="1000">
+  <img src="images/matmul_waveform.png" width="1000">
 </p>
 
 <p align="center">
 <sub>Waveform showing execution of the software-based 2×2 matrix multiplication program. The final values loaded into the A and B registers correspond to the computed output matrix stored at RAM locations <code>0x10</code>–<code>0x13</code>.</sub>
 </p>
-
-### Performance
-
-- **Program Size:** 125 assembly instructions
-- **Execution Time:** ≈ 24 µs @ 100 MHz (10 ns clock period)
-- **Implementation:** Software multiplication via repeated addition (no dedicated multiply hardware)
 
 > This program demonstrates that non-trivial linear algebra can be implemented entirely in software using a minimal instruction set consisting of arithmetic, memory operations, conditional branching, and loops.
 
