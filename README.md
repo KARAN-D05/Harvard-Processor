@@ -91,11 +91,9 @@ DONE:
 ```
 **Program Source:** [Mult.hex](Computer/Programs/Mult.hex)
 
-> Replacing LDB 0x06 with LOAD B, 0x01 removes one memory access per loop iteration, saving one clock cycle per iteration. Consequently, the optimization scales linearly with the multiplier value, reducing execution time by up to 255 clock cycles (2550 ns at a 10 ns clock period) for an 8-bit multiplier.
-
 Demonstrates Memory operations (`LDA`, `LDB`, `STA`), arithmetic (`ADD`, `SUB`, `PASS A`), status flag evaluation (`JZ`, `JNZ`), iterative control flow, looping, and program termination (`HLT`).
 
-> The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch-decode-execute cycle, decrementing the multiplier while accumulating the multiplicand. The compressed timeline highlights multiple loop iterations, repeated memory accesses, arithmetic operations, conditional branching, and the final program termination (HLT).
+> The waveform below shows the execution of the Integer Multiplication program implemented using repeated addition. The processor repeatedly executes the fetch-decode-execute cycle, decrementing the multiplier while accumulating the multiplicand.
 
 `[0x11(17) x 0x0D(13) = 0xDD(221)]`
 <p align="center">
@@ -110,6 +108,7 @@ This program implements unsigned 2×2 matrix multiplication entirely in software
 
 ```asm
 ; Matrix Multiplication Algorithm
+
 multiply(x, y):
     result = 0
     while x > 0:
