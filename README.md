@@ -119,10 +119,8 @@ This program implements unsigned 2×2 matrix multiplication entirely in software
 
 multiply(0x00, 0x04)      ; Compute A × E
 STA 0x08                  ; Store AE
-
 multiply(0x01, 0x06)      ; Compute B × G
 STA 0x09                  ; Store BG
-
 LDA 0x08                  ; Load AE
 LDB 0x09                  ; Load BG
 ADD                       ; Compute AE + BG
@@ -130,10 +128,8 @@ STA 0x10                  ; Store C00
 
 multiply(0x00, 0x05)      ; Compute A × F
 STA 0x0A                  ; Store AF
-
 multiply(0x01, 0x07)      ; Compute B × H
 STA 0x0B                  ; Store BH
-
 LDA 0x0A                  ; Load AF
 LDB 0x0B                  ; Load BH
 ADD                       ; Compute AF + BH
@@ -141,10 +137,8 @@ STA 0x11                  ; Store C01
 
 multiply(0x02, 0x04)      ; Compute C × E
 STA 0x0C                  ; Store CE
-
 multiply(0x03, 0x06)      ; Compute D × G
 STA 0x0D                  ; Store DG
-
 LDA 0x0C                  ; Load CE
 LDB 0x0D                  ; Load DG
 ADD                       ; Compute CE + DG
@@ -152,10 +146,8 @@ STA 0x12                  ; Store C10
 
 multiply(0x02, 0x05)      ; Compute C × F
 STA 0x0E                  ; Store CF
-
 multiply(0x03, 0x07)      ; Compute D × H
 STA 0x0F                  ; Store DH
-
 LDA 0x0E                  ; Load CF
 LDB 0x0F                  ; Load DH
 ADD                       ; Compute CF + DH
