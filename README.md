@@ -119,8 +119,6 @@ C11 = multiply(C, F) + multiply(D, H)
 ```
 **Program Source:** [Matmul.hex](Computer/Programs/Matmul.hex)
 
-The program was verified in simulation by observing the processor compute each matrix element through repeated-addition multiplication and accumulation. At program completion, the output matrix stored in RAM exactly matches the expected result.
-
 ```
 A = [07(0x00) 09(0x01)]   B = [02(0x04) 03(0x05)]   A × B = [3B(0x10) 54(0x11)]
     [0B(0x02) 0D(0x03)]       [05(0x06) 07(0x07)]           [57(0x12) 7C(0x13)]
