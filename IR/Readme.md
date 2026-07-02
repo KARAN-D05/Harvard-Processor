@@ -1,6 +1,6 @@
 # Instruction Register (IR)
 
-A 16-bit (Parameterized) loadable Instruction Register with asynchronous reset. The Instruction Register stores the current instruction fetched from the Instruction Memory (ROM) and presents it to the Control Unit for decoding and execution.
+A Parameterized 16-bit loadable Instruction Register with asynchronous reset. The Instruction Register stores the current instruction fetched from the Instruction Memory (ROM) and presents it to the Control Unit for decoding and execution.
 
 ## Features
 
