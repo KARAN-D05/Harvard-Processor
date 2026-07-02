@@ -1,4 +1,4 @@
-# Program Counter (PC)
+# Program Counter
 An 8-bit parameterized loadable counter with asynchronous reset used to track instruction addresses during program execution.
 
 ### Features
