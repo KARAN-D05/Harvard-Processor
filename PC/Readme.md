@@ -1,5 +1,5 @@
 # Program Counter
-An 8-bit parameterized loadable counter with asynchronous reset used to track instruction addresses during program execution.
+An 8-bit parameterized loadable counter with asynchronous reset used to track instruction address during program execution.
 
 ### Features
 * Asynchronous reset
