@@ -59,3 +59,23 @@ async def test(dut):
     await Timer(1, unit="ns")
 
     assert dut.out.value == 0x4D, "6"
+
+    dut.inp.value = 0xFF
+    dut.load.value = 1
+    dut.en.value = 0
+
+    await RisingEdge(dut.clk)
+
+    dut.en.value = 1
+
+    await RisingEdge(dut.clk)
+    await Timer(1, unit="ns")
+
+    assert dut.out.value == 0xFF, "7"
+
+    dut.load.value = 0
+
+    await RisingEdge(dut.clk)
+    await Timer(1, unit="ns")
+
+    assert dut.out.value == 0x00, "8"
