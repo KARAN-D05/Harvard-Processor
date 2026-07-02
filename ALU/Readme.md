@@ -1,5 +1,5 @@
 # ALU
-An 8-bit parameterized combinational Arithmetic Logic Unit (ALU) supporting arithmetic, logical, and data transfer operations.
+An 8-bit parameterized combinational Arithmetic Logic Unit supporting arithmetic, logical, and data transfer operations.
 
 <p align="center">
   <img src="images/alu_diagram.png" width="500"/>
