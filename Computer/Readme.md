@@ -1,4 +1,4 @@
-# 8-Bit Computer
+# Computer
 
 An 8-bit Harvard Architecture stored-program computer implemented entirely in synthesizable Verilog HDL.
 
