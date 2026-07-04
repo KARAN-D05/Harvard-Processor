@@ -210,7 +210,7 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 
 The RTL is verified using both traditional Verilog testbenches and modern Cocotb self-checking testbenches.
 
-Current verification methodology includes:
+Verification methodology includes:
 - **Directed Testing** - Handcrafted test cases covering reset, load, hold, increment, and control priority.
 - **Random Testing** - Python-generated randomized inputs validated against a software reference model using self-checking assertions.
 - **Exhaustive Testing** - Complete input-space verification for combinational modules such as the ALU by testing every possible input combination.
