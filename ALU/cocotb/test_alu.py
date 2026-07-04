@@ -37,13 +37,13 @@ async def check_outputs(dut, a, b, sel, expected, carry):
         f"Got={int(dut.neg.value)}"
     )
 
-    assert int(dut.agtb.value) == int(expected > b), (
+    assert int(dut.agtb.value) == int(a > b), (
         f"SEL={sel} A={a:02X} B={b:02X} "
         f"Expected={int(expected > b)} "
         f"Got={int(dut.agtb.value)}"
     )
 
-    assert int(dut.aeqb.value) == int(expected == b), (
+    assert int(dut.aeqb.value) == int(a == b), (
         f"SEL={sel} A={a:02X} B={b:02X} "
         f"Expected={int(expected == b)} "
         f"Got={int(dut.aeqb.value)}"
