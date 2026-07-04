@@ -256,9 +256,9 @@ Conditional branch instructions (`JGT`, `JLT`, and `JEQ`) operate on the stored 
 - `JEQ` : Jump if `A == B`
 
 
-The AGTB and AEQB flags capture the relationship between the ALU input operands (A and B) whenever the Flag Register is updated. Conditional branch instructions (JGT, JLT, JEQ) operate on these stored comparison flags rather than directly on arithmetic results. This design allows comparisons of original operands, arithmetic results, or newly loaded values by explicitly choosing when to refresh the Flag Register, providing flexible software-controlled comparison semantics.
+The AGTB and AEQB flags capture the relationship between the ALU input operands (`A` and `B`) whenever the Flag Register is updated. Conditional branch instructions (`JGT`, `JLT`, `JEQ`) operate on these stored comparison flags rather than directly on arithmetic results. This design allows comparisons of original operands, arithmetic results, or newly loaded values by explicitly choosing when to refresh the Flag Register, providing flexible software-controlled comparison semantics.
 
-Thus comparison is an explicit architectural operation rather than an implicit side effect of arithmetic. The programmer chooses when to snapshot the relationship between A and B by updating the Flag Register. This allows comparisons of original operands, arithmetic results, or newly loaded values using the same branch instructions.
+Thus comparison is an explicit architectural operation rather than an implicit side effect of arithmetic. The programmer chooses when to snapshot the relationship between A and B by updating the Flag Register. 
 
 ## ISA Summary
 
