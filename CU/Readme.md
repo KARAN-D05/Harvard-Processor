@@ -1,6 +1,6 @@
 # Control Unit (CU)
 
-A combinational Hardwired Control Unit responsible for generating the processor's 15-bit control word. The Control Unit decodes the current instruction opcode together with the processor T-State and status flags to generate all control signals required for instruction fetch, data transfer, arithmetic execution, memory access, and conditional branching.
+A combinational Hardwired Control Unit responsible for generating the processor's 16-bit control word. The Control Unit decodes the current instruction opcode together with the processor T-State and status flags to generate all control signals required for instruction fetch, data transfer, arithmetic execution, memory access, and conditional branching.
 
 Unlike a microprogrammed controller, all control signals are generated directly using combinational logic, providing deterministic instruction execution with low hardware complexity and latency.
 
