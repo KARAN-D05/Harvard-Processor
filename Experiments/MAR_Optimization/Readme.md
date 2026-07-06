@@ -107,11 +107,3 @@ Discussion will include:
 ## Conclusion
 
 *To be completed after implementation.*
-
----
-
-## References
-
-- David A. Patterson and John L. Hennessy,
-  *Computer Organization and Design*.
-- Amdahl, G. M., "Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities," 1967.
