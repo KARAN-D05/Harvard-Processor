@@ -66,7 +66,7 @@ LOOP:
     LDA 0x08          ; Load multiplier (loop counter)
 
     PASS A            ; Check if counter is zero
-    JZ DONE           ; Finish if multiplication is complete
+    JZ DONE           ; Jump if counter is zero
 
     SUB               ; Decrement counter
     STA 0x08          ; Store updated counter
