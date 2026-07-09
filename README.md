@@ -25,7 +25,6 @@ This program compares two unsigned 8-bit values stored in RAM address `0x08` and
 `Max.asm`
 
 ```asm
-; Maximum of Two Numbers
 
         LDA 0x08        ; Load first number
         LDB 0x09        ; Load second number
@@ -61,7 +60,6 @@ This program multiplies two unsigned 8-bit values using repeated addition. The m
 `Mult.asm`
 
 ```asm
-; Unsigned Integer Multiplication (Repeated Addition)
 
 LOOP:
     LDB 0x06          ; Load constant 1
@@ -113,7 +111,6 @@ This program implements unsigned 2×2 matrix multiplication entirely in software
 
 `Matmul.asm`
 ```asm
-; 2 × 2 Matrix Multiplication
 
 ; Compute C00 = A×E + B×G
 multiply(0x00, 0x04)      ; Compute A×E
