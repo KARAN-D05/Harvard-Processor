@@ -1,5 +1,7 @@
 # 8Bit-Computer-rtl
-A parameterized 8-bit stored-program computer designed from the RTL level in Verilog. The processor follows a **Harvard architecture** with separate program and data memories, a custom Instruction Set Architecture (ISA), a **hardwired control unit**, and a **multiplexer-based internal data bus** for datapath communication.
+A parameterized stored-program computer designed from the RTL level in Verilog. The processor follows a **Harvard architecture** with separate program and data memories, a custom Instruction Set Architecture (ISA), a **hardwired control unit**, and a **multiplexer-based internal data bus** for datapath communication.
+
+> Demonstrated at 8-bit but configurable to any data width at instantiation.
 
 ## 🛠️ Tools & Technologies
 ![Icarus Verilog](https://img.shields.io/badge/Icarus_Verilog-Simulation-1E88E5?style=flat-square)
