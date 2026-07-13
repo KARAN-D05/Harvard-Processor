@@ -418,16 +418,9 @@ which matches simulation and experimental measurements.
 - Both forms of Amdahl's Law (execution-time form and speedup form) independently reproduced the optimized execution-time models, providing an additional validation of the analytical models and architectural optimization.
 - The absolute number of clock cycles saved increased dramatically with workload, experimentally demonstrating Amdahl's principle that optimizations affecting frequently executed portions of a program provide increasingly larger absolute performance gains.
 - Although matrix multiplication is composed of repeated multiplication kernels, it achieves a lower relative speedup (≈1.231×) than standalone multiplication (≈1.269×). This is because a smaller fraction of its total execution time is spent executing memory instructions, reducing the proportion of execution affected by the optimization.
-
-```
-Initially, the matrix multiplication benchmark was expected to exhibit the greatest relative speedup because it repeatedly invokes the multiplication kernel and performs substantially more memory accesses than the standalone multiplication benchmark.
-
-However, analysis revealed that the benchmark also performs additional accumulation, control, and data movement operations that are unaffected by the MAR optimization. Consequently, a smaller fraction of the total execution time is accelerated, reducing the overall speedup despite achieving significantly larger absolute clock cycle savings.
-
-This observation illustrates Amdahl's Law: the overall speedup depends on the fraction of execution time affected by an optimization rather than the absolute amount of computation performed.
-
-An interesting implication of this study is that if the standalone multiplication benchmark were similarly modified to use immediate addressing for loading the decrement constant, its baseline execution model would reduce from 33M + 5 to approximately 32M + 5 clock cycles. This would decrease the fraction of execution time affected by the MAR optimization, suggesting that its relative speedup would also decrease, potentially approaching that of the matrix multiplication benchmark. This highlights that Amdahl's Law depends on the proportion of execution time affected by an optimization rather than the computational complexity of the benchmark itself.
-```
+- Initially, the matrix multiplication benchmark was expected to exhibit the greatest relative speedup because it repeatedly invokes the multiplication kernel and performs substantially more memory accesses than the standalone multiplication benchmark.
+- However, analysis revealed that the benchmark also performs additional accumulation, control, and data movement operations that are unaffected by the MAR optimization. Consequently, a smaller fraction of the total execution time is accelerated, reducing the overall speedup despite achieving significantly larger absolute clock cycle savings. This observation illustrates Amdahl's Law: the overall speedup depends on the fraction of execution time affected by an optimization rather than the absolute amount of computation performed.
+- An interesting implication of this study is that if the standalone multiplication benchmark were similarly modified to use immediate addressing for loading the decrement constant, its baseline execution model would reduce from 33M + 5 to approximately 32M + 5 clock cycles. This would decrease the fraction of execution time affected by the MAR optimization, suggesting that its relative speedup would also decrease, potentially approaching that of the matrix multiplication benchmark. This highlights that Amdahl's Law depends on the proportion of execution time affected by an optimization rather than the computational complexity of the benchmark itself.
 
 ## Conclusion
 
