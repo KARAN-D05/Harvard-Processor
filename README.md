@@ -32,12 +32,12 @@ This program compares two unsigned 8-bit values stored in RAM address `0x08` and
         LDB 0x09        ; Load second number
 
         PASS A          ; Update status Flags
-        JLT STORE_B     ; If A < B, branch to store second number
+        JLT STORE B     ; If A < B, branch to store second number
 
         STA 0x0A        ; Store first number as maximum
         JMP END         ; Skip alternate path
 
-STORE_B:
+STORE B:
         STB 0x0A        ; Store second number as maximum
 
 END:
