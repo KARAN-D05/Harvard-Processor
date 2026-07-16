@@ -1,6 +1,3 @@
-
-11. Printing statistics.
-
 === Computer ===
 
    Number of wires:              18482
@@ -68,4 +65,3 @@
      sky130_fd_sc_hd__xor2_1        10
 
    Chip area for module '\Computer': 80091.814400
-
