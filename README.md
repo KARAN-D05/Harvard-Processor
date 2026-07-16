@@ -218,9 +218,27 @@ An architectural optimization eliminating the Memory Address Register (MAR) incr
 | Unsigned Multiplication | 1.269× | 1786 |
 | 2×2 Matrix Multiplication | 1.231× | 12256 |
 
-> Removing the Memory Address Register reduced processor area by approximately 255 µm² and slightly reduced total power consumption, while leaving the critical timing path essentially unchanged. This indicates that the optimization primarily improves architectural performance by reducing instruction latency rather than by shortening the processor's critical path.
+### Post-Synthesis Evaluation
 
-Detailed analytical performance models, Amdahl's Law validation, workload analysis, and experimental methodology are documented in the [Architectural Studies](Architectural-Studies/MAR_Optimization) folder.
+The optimized processor was synthesized using the Sky130 HD standard cell library and compared against the baseline implementation.
+
+| Metric | Baseline | Optimized | Change |
+|:-------|---------:|----------:|-------:|
+| Area | 80347.06 µm² | 80091.81 µm² | **-0.32%** |
+| Critical Path | 25.55 ns | 25.65 ns | **Essentially Unchanged** |
+| Maximum Frequency | ~39 MHz | ~39 MHz | **Unchanged** |
+| Total Power | 8.67 mW | 8.64 mW | **-0.35%** |
+| Steady-State CPI | ~2.54 | **2.00** | **-21.3%** |
+
+> The optimization therefore represents a favorable architectural trade-off: a negligible impact on physical implementation (area, timing, and power) in exchange for substantial reductions in execution cycles and up to 1.269× speedup on memory-intensive workloads.
+
+### Observation
+
+- Removing the Memory Address Register (MAR) produced a modest reduction in silicon area and power while leaving the processor's critical path and maximum operating frequency essentially unchanged. Since the MAR was not part of the critical timing path, eliminating it primarily reduced the latency of memory instructions rather than increasing the clock frequency.
+
+- Consequently, the optimization preserves the processor's physical implementation characteristics while substantially improving architectural performance. Memory-intensive workloads execute with significantly fewer clock cycles—saving thousands of cycles for larger benchmarks—without requiring additional hardware resources or sacrificing operating frequency.
+
+- Detailed analytical performance models, Amdahl's Law validation, workload analysis, and experimental methodology are documented in the [Architectural Studies](Architectural-Studies/MAR_Optimization) folder.
 
 ## 🔍 Verification
 
@@ -246,6 +264,7 @@ Verification methodology includes:
 | Instruction Register | Stores current instruction                          | ✅     |
 | T-State Counter      | Tracks the T-state of an instruction                | ✅     |
 | Control Unit         | Generates control signals                           | ✅     |
+| Computer             | Multi-Cycle Harvard Processor                       | ✅     |
 
 ## ⬇️ Download This Repository
 
