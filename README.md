@@ -208,9 +208,9 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 
 ## 📊 Performance Evaluation
 
-The processor was evaluated using three benchmark programs: Maximum of Two Numbers, Unsigned Multiplication, and 2×2 Matrix Multiplication.
-
 An architectural optimization eliminating the Memory Address Register (MAR) increased the proportion of the ISA executing in 2 T-states from 84% to 100%, resulting in a uniform **2-cycle instruction execution** across the ISA.
+
+The processor was evaluated using three benchmark programs: Maximum of Two Numbers, Unsigned Multiplication, and 2×2 Matrix Multiplication.
 
 | Benchmark | Maximum Speedup | Maximum Clock Cycles Saved |
 |-----------|----------------|---------------------------|
