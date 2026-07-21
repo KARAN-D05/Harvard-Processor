@@ -185,7 +185,7 @@ A = [07 09]   B = [02 03]   A × B = [3B 54]
 
 ## 💡 Square Root
 
-This program computes the integer square root of an unsigned 8-bit number using repeated addition. The current candidate (i) is stored in RAM address `0x00`. The accumulated square (i²) is stored in RAM address `0x02`, and a copy of the current candidate is preserved in RAM address `0x03` during multiplication. The input number N is stored in RAM address `0x04`. Multiplication overflow is detected using the Carry flag, allowing the program to correctly compute the integer square root for all unsigned 8-bit inputs (0x00–0xFF).
+This program computes the integer square root of an unsigned 8-bit number. The current candidate `(i)` is stored in RAM address `0x00`. The accumulated square `(i²)` is stored in RAM address `0x02`, and a copy of the current candidate is preserved in RAM address `0x03` during multiplication. The input number N is stored in RAM address `0x04`. Multiplication overflow is detected using the Carry flag, allowing the program to correctly compute the integer square root for all unsigned 8-bit inputs (0x00–0xFF).
 
 `Sqrt.asm`
 ```asm
@@ -198,32 +198,25 @@ MULTIPLY:
     LDA 0x00          ; Load multiplier
     SUB               ; Decrement multiplier
     STA 0x00          ; Store updated multiplier
-
     LDA 0x02          ; Load accumulated square
     LDB 0x03          ; Load current i
     ADD               ; square += i
     JC PREVIOUS       ; Overflow => i² > N
     STA 0x02          ; Store accumulated square
-
     LDA 0x00          ; Reload multiplier
     PASS A            ; Update flags
     JNZ MULTIPLY      ; Continue multiplication
     LDA 0x02          ; Load computed square
     LDB 0x04          ; Load input N
     PASS A            ; Compare i² and N
-
     JEQ DONE          ; Exact square found
     JGT PREVIOUS      ; i² > N
-
-NEXT:
     LDB 0x03          ; Load current i
     LDA 0x01          ; Load constant 1
     ADD               ; i = i + 1
     STA 0x00          ; Store next candidate
-
     LDA 0x00          ; Load zero
     STA 0x02          ; Clear square accumulator
-
     JMP START         ; Repeat
 
 PREVIOUS:
