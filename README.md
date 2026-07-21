@@ -191,6 +191,8 @@ This program computes the integer square root of an unsigned 8-bit number. The c
 ```asm
     LOAD B 0x01       ; Load Constant 1
     STB 0x00          ; Initialize i
+    LOAD A 0x00       ; Load Constant 0
+    STA 0x02          ; Initialize accumulator
 
 START:
     LDB 0x00          ; Load current i
