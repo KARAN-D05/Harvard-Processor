@@ -183,6 +183,76 @@ A = [07 09]   B = [02 03]   A × B = [3B 54]
 <sub>Waveform showing execution of the software-based 2×2 matrix multiplication program. The final values loaded into the A and B registers correspond to the computed output matrix stored at RAM locations <code>0x10</code>-<code>0x13</code>.</sub>
 </p>
 
+## 💡 Square Root
+
+This program computes the integer square root of an unsigned 8-bit number using repeated addition. The current candidate (i) is stored in RAM address `0x00`. The accumulated square (i²) is stored in RAM address `0x02`, and a copy of the current candidate is preserved in RAM address `0x03` during multiplication. The input number N is stored in RAM address `0x04`. Multiplication overflow is detected using the Carry flag, allowing the program to correctly compute the integer square root for all unsigned 8-bit inputs (0x00–0xFF).
+
+`Sqrt.asm`
+```asm
+START:
+    LDB 0x00          ; Load current i
+    STB 0x03          ; Save current i
+
+MULTIPLY:
+    L0AD B 0x01       ; Load constant 1
+    LDA 0x00          ; Load multiplier
+    SUB               ; Decrement multiplier
+    STA 0x00          ; Store updated multiplier
+
+    LDA 0x02          ; Load accumulated square
+    LDB 0x03          ; Load current i
+    ADD               ; square += i
+    JC PREVIOUS       ; Overflow => i² > N
+    STA 0x02          ; Store accumulated square
+
+    LDA 0x00          ; Reload multiplier
+    PASS A            ; Update flags
+    JNZ MULTIPLY      ; Continue multiplication
+    LDA 0x02          ; Load computed square
+    LDB 0x04          ; Load input N
+    PASS A            ; Compare i² and N
+
+    JEQ DONE          ; Exact square found
+    JGT PREVIOUS      ; i² > N
+
+NEXT:
+    LDB 0x03          ; Load current i
+    LDA 0x01          ; Load constant 1
+    ADD               ; i = i + 1
+    STA 0x00          ; Store next candidate
+
+    LDA 0x00          ; Load zero
+    STA 0x02          ; Clear square accumulator
+
+    JMP START         ; Repeat
+
+PREVIOUS:
+    LDA 0x03          ; Load current i
+    LDB 0x01          ; Load constant 1
+    SUB               ; Compute i - 1
+    STA 0x03          ; Store answer
+
+DONE:
+    LDA 0x03          ; Load integer square root
+    HLT               ; End program
+```
+
+**Program Source:** [Sqrt.hex](Computer/Programs/Sqrt.hex)
+
+> This program demonstrates that higher-level mathematical algorithms can be implemented entirely in software using a minimal instruction set consisting of arithmetic, memory operations, conditional branching, loops, and processor status flags.
+
+```
+√FF(255)= floor(15.9687) = 0F(15)
+```
+
+<p align="center">
+  <img src="Computer/images/Sqrt_waveform.png" width="1000">
+</p>
+
+<p align="center">
+<sub>Waveform showing execution of the software-based integer square root program. The input value <code>0xFF</code> is stored at RAM location <code>0x04</code>, and the final result <code>0x0F</code> is produced after iterative software multiplication, comparison, and carry-based overflow detection.</sub>
+</p>
+
 ## 🔬 Physical Characterization
 
 The following table summarizes post-synthesis implementation results obtained using the Sky130 HD standard-cell library.
