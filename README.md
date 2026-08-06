@@ -270,7 +270,7 @@ Timing results correspond to constrained static timing analysis using a 10 ns cl
 | [Control Unit](CU) | 359.0944 µm² | 2.29 ns | ~437 MHz | 41.4 µW |
 | [Computer](Computer) | 80347.06 µm² | 25.55 ns | ~39 MHz | 8.67 mW |
 
-> Note: The reported RAM area and timing correspond to a behavioral Verilog memory synthesized entirely using Sky130 HD standard cells. In the absence of a dedicated SRAM macro, the memory is implemented using flip-flops together with synthesized address decoding and hierarchical multiplexing logic. This register-based memory dominates the processor's area and critical path, with the worst-case path originating from the Memory Address Register (MAR) through the synthesized memory network. Further discussion and characterization are provided in the [processor documentation](Computer#timing-analysis).
+> Note: The reported RAM area and timing correspond to a behavioral Verilog memory synthesized entirely using Sky130 HD standard cells. In the absence of a dedicated SRAM macro, the memory is implemented using flip-flops together with synthesized address decoding and hierarchical multiplexing logic. This register-based memory dominates the processor's area and critical path, with the worst-case path originating from the Memory Address Register (MAR) through the synthesized memory network. Further discussion and characterization are provided in the [processor documentation](Computer).
 
 ## 📊 Performance Evaluation
 
