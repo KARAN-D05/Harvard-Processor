@@ -1,6 +1,6 @@
 # Computer
 
-An parameterized 8-bit Harvard Architecture stored-program computer implemented entirely in synthesizable Verilog HDL.
+A parameterized Harvard Architecture processor implemented entirely in synthesizable Verilog HDL.
 
 The processor features a custom Instruction Set Architecture (ISA), a hardwired control unit and parameterized components. It supports arithmetic, logical, memory, and conditional branch instructions while demonstrating the complete RTL-to-Gate synthesis flow using the Sky130 HD standard-cell library.
 
@@ -56,12 +56,13 @@ Clock Constraint
 
 The complete processor successfully synthesized to the Sky130 HD standard-cell library and underwent Static Timing Analysis (STA).
 
-The reported worst negative slack is primarily caused by the behavioral implementation of the 256 × 8 Data RAM. Since the synthesis flow used only standard cells, the memory array was implemented using approximately **2048 D Flip-Flops** together with large address decoding and multiplexing logic rather than a dedicated SRAM macro.
+The reported worst negative slack is dominated by the behavioral implementation of the 256 × 8 Data RAM. Since the synthesis flow targets only Sky130 HD standard cells, the memory is realized as approximately 2048 D Flip-Flops together with synthesized address decoding and hierarchical multiplexing logic rather than a dedicated SRAM macro.
 
-Consequently, the critical path traverses the synthesized memory implementation, making the reported timing representative of the register-based RAM rather than the processor datapath alone.
+Static Timing Analysis consistently identified the critical path as originating from the **Memory Address Register (MAR)**, propagating through the synthesized memory read network and associated combinational logic before reaching the destination register. Experimental characterization across multiple synthesized memory depths (8 B - 1024 B) showed that increasing memory depth significantly increases both area and address-path delay, confirming that the register-based memory implementation dominates the processor's timing.
 
-In a practical ASIC implementation, this memory would typically be replaced with a dedicated SRAM macro, substantially reducing both chip area and critical path delay.
+Further investigation of the synthesized netlist showed that the least significant address bits experience the highest effective electrical loading due to the hierarchical multiplexer structure generated during synthesis, explaining why the critical path consistently originates from the lower MAR address bits.
 
+These timing results therefore characterize the synthesized register-based memory implementation rather than the processor datapath itself. In a practical ASIC implementation, the behavioral RAM would typically be replaced by a dedicated SRAM macro, substantially reducing both silicon area and critical path delay.
 
 ## Power
 
