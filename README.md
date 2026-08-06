@@ -252,7 +252,6 @@ DONE:
 ## 🔬 Physical Characterization
 
 The following table summarizes post-synthesis implementation results obtained using the Sky130 HD standard-cell library.
-Timing results correspond to constrained static timing analysis using a 10 ns clock period, 1 ns input delay, and 1 ns output delay.
 
 > Technology: Sky130HD
 
