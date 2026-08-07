@@ -71,7 +71,7 @@ This characterization provides a practical illustration of how memory organizati
 | ------- | ----------------- | ----------------------- | -------------------- | ------------------ | ---------------- | ------------ |
 |     64 B |            ~26,000 |                      131 | MAR[0]               |                4.71 |              8.30 |         +1.58 |
 |    128 B |            ~42,700 |                      259 | MAR[0]               |                9.10 |             13.78 |         −3.92 |
-|    256 B |            ~80,400 |                      515 | MAR[0]               |               17.89 |             25.55 |        −15.98 |
+|    256 B |            ~80,400 |                      515 | MAR[0]               |               17.89 |             25.55 |        −16.04 |
 
 ### Clock→Q Characterization of MAR Address Bits
 | Address Bit | 64 B | 128 B | 256 B |
