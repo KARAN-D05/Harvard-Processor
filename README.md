@@ -4,10 +4,6 @@ The processor follows a **Harvard architecture** with separate program and data 
 > **Core:** 261 MHz | 3,666.02 µm² (Sky130 HD) <br>
 > **Peak Instruction Throughput**: 130.55 MIPS
 
-`
-Demonstrated at 8-bit but configurable to any data width at instantiation.
-`
-
 ## 🛠️ Tools & Technologies
 ![Icarus Verilog](https://img.shields.io/badge/Icarus_Verilog-Simulation-1E88E5?style=flat-square)
 ![Verilator](https://img.shields.io/badge/Verilator-Linting-00897B?style=flat-square)
