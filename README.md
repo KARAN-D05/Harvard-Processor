@@ -3,6 +3,14 @@ The processor follows a **Harvard architecture** with separate program and data 
 
 > **Core:** 261 MHz | 3,666.02 µm² (Sky130 HD)
 
+| Metric | Unoptimized | Optimized |
+|---|---|---|
+| Average CPI | 2.54 | 2.00 |
+| IPC | 0.394 | 0.500 |
+| Estimated Instruction Throughput | 102.80 MIPS | 130.55 MIPS |
+
+> Throughput improvement: 1.27× (27%)
+
 `
 Demonstrated at 8-bit but configurable to any data width at instantiation.
 `
