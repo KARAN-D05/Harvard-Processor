@@ -2,6 +2,7 @@
 The processor follows a **Harvard architecture** with separate program and data memories, a custom Instruction Set Architecture (ISA), a **hardwired control unit**, and a **multiplexer-based internal data bus** for datapath communication.
 
 > **Core:** 261 MHz | 3,666.02 µm² (Sky130 HD)
+
 > Peak Instruction Throughput: 130.55 MIPS
 
 `
