@@ -9,11 +9,7 @@ The processor follows a **Harvard architecture** with separate program and data 
 | IPC | 0.394 | 0.500 |
 | Instruction Throughput | 102.80 MIPS | 130.55 MIPS |
 
-Throughput improvement: 1.27× (27%)
-
-`
-Demonstrated at 8-bit but configurable to any data width at instantiation.
-`
+` Throughput improvement: 1.27× (27%)`
 
 ## 🛠️ Tools & Technologies
 ![Icarus Verilog](https://img.shields.io/badge/Icarus_Verilog-Simulation-1E88E5?style=flat-square)
