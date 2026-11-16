@@ -1,7 +1,7 @@
 # Multi-Cycle Harvard Processor
 The processor follows a **Harvard architecture** with separate program and data memories, a custom Instruction Set Architecture (ISA), a **hardwired control unit**, and a **multiplexer-based internal data bus** for datapath communication.
 
-> **Core:** 242.7 MHz | 3,375.74 µm² (Sky130 HD) | 0.492 mW <br>
+> **Core:** 242.7 MHz | 3,375.74 µm² | 0.492 mW <br>
 > **Peak Instruction Throughput:** 121.35 MIPS
 
 `
