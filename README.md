@@ -1,8 +1,8 @@
 # Multi-Cycle Harvard Processor
 The processor follows a **Harvard architecture** with separate program and data memories, a custom Instruction Set Architecture (ISA), a **hardwired control unit**, and a **multiplexer-based internal data bus** for datapath communication.
 
-> **Core:** 261 MHz | 3,666.02 µm² (Sky130 HD) <br>
-> **Peak Instruction Throughput:** 130.55 MIPS
+> **Core:** 242.7 MHz | 3,375.74 µm² (Sky130 HD) <br>
+> **Peak Instruction Throughput:** 121.35 MIPS
 
 `
 Demonstrated at 8-bit but configurable to any data width at instantiation.
@@ -293,6 +293,7 @@ The processor was evaluated using three benchmark programs: Maximum of Two Numbe
 
 The optimized processor was synthesized using the Sky130 HD standard cell library and compared against the baseline implementation.
 
+#### System-Level Analysis
 | Metric | Baseline | Optimized | Change |
 |-------|---------|----------|-------|
 | Area | 80347.06 µm² | 80091.81 µm² | **-0.32%** |
@@ -300,8 +301,18 @@ The optimized processor was synthesized using the Sky130 HD standard cell librar
 | Maximum Frequency | ~39 MHz | ~39 MHz | **Unchanged** |
 | Total Power | 8.67 mW | 8.64 mW | **-0.35%** |
 | Steady-State CPI | ~2.54 | **2.00** | **-21.3%** |
+| Instruction Throughput | ~15.35 MIPS | **19.5 MIPS** | **+27.1%** |
 
 > The optimization therefore represents a favorable architectural trade-off: a negligible impact on physical implementation (area, timing, and power) in exchange for substantial reductions in execution cycles and up to 1.269× speedup on memory-intensive workloads.
+
+#### Core-Level Analysis (RAM Excluded)
+| Metric | Baseline | Optimized | Change |
+|-------|---------|----------|-------|
+| Core Area | 3666.02 µm² | 3375.74 µm² | **-7.92%** |
+| Critical Path | 3.831 ns | 4.120 ns | **+7.55%** |
+| Maximum Frequency | 261 MHz | 242.7 MHz | **-7.01%** |
+| Steady-State CPI | ~2.54 | **2.00** | **-21.3%** |
+| Instruction Throughput | 102.76 MIPS | **121.35 MIPS** | **+18.09%** |
 
 ### 📝 Observation
 
